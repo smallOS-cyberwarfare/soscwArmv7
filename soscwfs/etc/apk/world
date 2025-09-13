@@ -3,13 +3,16 @@ alpine-keys
 alpine-release
 apk-tools
 bash
+build-base
 busybox
 curl
+gcc
 git
 gpg
 gpg-agent
 jq
 libc-utils
+make
 nodejs
 npm
 p7zip
