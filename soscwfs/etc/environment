@@ -1,0 +1,36 @@
+SHELL=/data/data/com.termux/files/usr/bin/bash
+COLORTERM=truecolor
+HISTCONTROL=ignoreboth
+PREFIX=/data/data/com.termux/files/usr
+SHELL_CMD__RUNNER_NAME=terminal-session
+TERMUX_APP__PACKAGE_NAME=com.termux
+TERMUX_APP__IS_INSTALLED_ON_EXTERNAL_STORAGE=false
+TERMUX__SE_FILE_CONTEXT=u:object_r:app_data_file:s0:c213,c256,c512,c768                                                         PWD=/data/data/com.termux/files/home/proyects/small             TERMUX_VERSION=0.119.0-beta.1                                   SYSTEMSERVERCLASSPATH=/system/framework/services.jar:/system/framework/ethernet-service.jar:/system/framework/wifi-service.jar:/system/framework/com.android.location.provider.jar              EXTERNAL_STORAGE=/sdcard                                        LD_PRELOAD=/data/data/com.termux/files/usr/lib/libtermux-exec-ld-preload.so                                                     HOME=/data/data/com.termux/files/home                           LANG=en_US.UTF-8                                                TERMUX_APP__PID=28836                                           ANDROID_RUNTIME_ROOT=/apex/com.android.runtime                  TERMUX_APP__APP_VERSION_NAME=0.119.0-beta.1                     DEX2OATBOOTCLASSPATH=/apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/miuisdk@boot.jar:/system/framework/miuisystemsdk@boot.jar:/system/framework/android.test.base.jar:/system/framework/mediatek-telephony-base.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/OPCommonTelephony.jar:/system/framework/mediatek-ims-common.jar:/system/framework/mediatek-ims-base.jar:/system/framework/mediatek-telecom-common.jar
+TMPDIR=/data/data/com.termux/files/usr/tmp
+SHELL_CMD__SHELL_ID=0
+ANDROID_STORAGE=/storage                                        TERM=xterm-256color
+TERMUX_APP__IS_DEBUGGABLE_BUILD=true
+TERMUX_APP__APP_VERSION_CODE=1020
+ASEC_MOUNTPOINT=/mnt/asec
+SHLVL=1
+SHELL_CMD__APP_TERMINAL_SESSION_NUMBER_SINCE_APP_START=0
+TERMUX_APP__APK_RELEASE=GITHUB
+TERMUX__SE_PROCESS_CONTEXT=u:r:untrusted_app_27:s0:c213,c256,c512,c768
+SHELL_CMD__PACKAGE_NAME=com.termux
+PATH=/data/data/com.termux/files/usr/bin
+TERMUX_APP__DATA_DIR=/data/user/0/com.termux
+TERMUX_APP__TARGET_SDK=28
+TERMUX__UID=10213
+TERMUX_APP__APK_FILE=/data/app/com.termux-p6CcCAOZ_FeqPxEz5q96bA==/base.apk
+TERMUX__USER_ID=0
+ANDROID_ASSETS=/system/app
+TERMUX__SE_INFO=default:targetSdkVersion=28:complete
+SHELL_CMD__APP_TERMINAL_SESSION_NUMBER_SINCE_BOOT=5
+_=/data/data/com.termux/files/usr/bin/env
+OLDPWD=/data/data/com.termux/files/home/proyects/small/smallFileSystem
+ANDROID_DATA=/data
+ANDROID_ROOT=/system
+ANDROID_RUNTIME_ROOT=/apex/com.android.runtime
+ANDROID_TZDATA_ROOT=/apex/com.android.tzdata
+BOOTCLASSPATH=/apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/miuisdk@boot.jar:/system/framework/miuisystemsdk@boot.jar:/system/framework/android.test.base.jar:/system/framework/mediatek-telephony-base.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/OPCommonTelephony.jar:/system/framework/mediatek-ims-common.jar:/system/framework/mediatek-ims-base.jar:/system/framework/mediatek-telecom-common.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.media/javalib/updatable-media.jar
+DEX2OATBOOTCLASSPATH=/apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/miuisdk@boot.jar:/system/framework/miuisystemsdk@boot.jar:/system/framework/android.test.base.jar:/system/framework/mediatek-telephony-base.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/OPCommonTelephony.jar:/system/framework/mediatek-ims-common.jar:/system/framework/mediatek-ims-base.jar:/system/framework/mediatek-telecom-common.jar

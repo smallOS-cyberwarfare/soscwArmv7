@@ -1,0 +1,370 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@11.3.0
+2 info using node@v22.16.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 warn Expanding --lockfile to --lockfile-version. This will stop working in the next major version of npm.
+5 silly config load:file:/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/.npmrc
+6 silly config load:file:/home/.npmrc
+7 silly config load:file:/etc/npmrc
+8 verbose title npm install
+9 verbose argv "install" "--ignore-scripts" "--no-lockfile" "--omit" "dev" "--legacy-peer-deps" "--no-global"
+10 verbose logfile logs-max:10 dir:/home/.npm/_logs/2025-09-13T04_48_06_775Z-
+11 verbose logfile /home/.npm/_logs/2025-09-13T04_48_06_775Z-debug-0.log
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:478674944 maxSize:119668736 maxEntrySize:59834368
+14 silly idealTree buildDeps
+15 silly fetch manifest typescript@^5.3.2
+16 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/typescript 3416ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/typescript set size:undefined disposed:false
+19 silly fetch manifest @types/node@^16.18
+20 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+21 http cache https://registry.npmjs.org/@types%2fnode 1060ms (cache hit)
+22 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:10530006 disposed:false
+23 silly fetch manifest coc.nvim@^0.0.83-next.19
+24 silly packumentCache full:https://registry.npmjs.org/coc.nvim cache-miss
+25 http cache https://registry.npmjs.org/coc.nvim 39ms (cache hit)
+26 silly packumentCache full:https://registry.npmjs.org/coc.nvim set size:348099 disposed:false
+27 silly fetch manifest esbuild@^0.25.0
+28 silly packumentCache full:https://registry.npmjs.org/esbuild cache-miss
+29 http cache https://registry.npmjs.org/esbuild 47ms (cache hit)
+30 silly packumentCache full:https://registry.npmjs.org/esbuild set size:1222589 disposed:false
+31 silly fetch manifest semver@^7.3.7
+32 silly packumentCache full:https://registry.npmjs.org/semver cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/semver 9021ms (cache miss)
+34 silly packumentCache full:https://registry.npmjs.org/semver set size:undefined disposed:false
+35 silly fetch manifest strip-ansi@^7.0.1
+36 silly packumentCache full:https://registry.npmjs.org/strip-ansi cache-miss
+37 http fetch GET 200 https://registry.npmjs.org/strip-ansi 215ms (cache miss)
+38 silly packumentCache full:https://registry.npmjs.org/strip-ansi set size:undefined disposed:false
+39 silly fetch manifest vscode-languageserver-protocol@^3.17.2
+40 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol cache-miss
+41 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-protocol 243ms (cache miss)
+42 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol set size:undefined disposed:false
+43 silly fetch manifest which@^2.0.2
+44 silly packumentCache full:https://registry.npmjs.org/which cache-miss
+45 http fetch GET 200 https://registry.npmjs.org/which 150ms (cache miss)
+46 silly packumentCache full:https://registry.npmjs.org/which set size:undefined disposed:false
+47 silly placeDep ROOT @types/node@16.18.126 OK for: coc-tsserver@2.3.1 want: ^16.18
+48 silly placeDep ROOT coc.nvim@0.0.83-next.24 OK for: coc-tsserver@2.3.1 want: ^0.0.83-next.19
+49 silly placeDep ROOT esbuild@0.25.9 OK for: coc-tsserver@2.3.1 want: ^0.25.0
+50 silly placeDep ROOT semver@7.7.2 OK for: coc-tsserver@2.3.1 want: ^7.3.7
+51 silly placeDep ROOT strip-ansi@7.1.2 OK for: coc-tsserver@2.3.1 want: ^7.0.1
+52 silly placeDep ROOT typescript@5.9.2 OK for: coc-tsserver@2.3.1 want: ^5.3.2
+53 silly placeDep ROOT vscode-languageserver-protocol@3.17.5 OK for: coc-tsserver@2.3.1 want: ^3.17.2
+54 silly placeDep ROOT which@2.0.2 OK for: coc-tsserver@2.3.1 want: ^2.0.2
+55 silly fetch manifest @esbuild/aix-ppc64@0.25.9
+56 silly packumentCache full:https://registry.npmjs.org/@esbuild%2faix-ppc64 cache-miss
+57 silly fetch manifest @esbuild/android-arm@0.25.9
+58 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm cache-miss
+59 silly fetch manifest @esbuild/android-arm64@0.25.9
+60 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm64 cache-miss
+61 silly fetch manifest @esbuild/android-x64@0.25.9
+62 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-x64 cache-miss
+63 silly fetch manifest @esbuild/darwin-arm64@0.25.9
+64 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-arm64 cache-miss
+65 silly fetch manifest @esbuild/darwin-x64@0.25.9
+66 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-x64 cache-miss
+67 silly fetch manifest @esbuild/freebsd-arm64@0.25.9
+68 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-arm64 cache-miss
+69 http fetch GET 200 https://registry.npmjs.org/@esbuild%2faix-ppc64 273ms (cache miss)
+70 silly packumentCache full:https://registry.npmjs.org/@esbuild%2faix-ppc64 set size:undefined disposed:false
+71 silly fetch manifest @esbuild/freebsd-x64@0.25.9
+72 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-x64 cache-miss
+73 http fetch GET 200 https://registry.npmjs.org/@esbuild%2ffreebsd-x64 791ms (cache miss)
+74 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-x64 set size:undefined disposed:false
+75 silly fetch manifest @esbuild/linux-arm@0.25.9
+76 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm cache-miss
+77 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-arm 438ms (cache miss)
+78 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm set size:undefined disposed:false
+79 silly fetch manifest @esbuild/linux-arm64@0.25.9
+80 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm64 cache-miss
+81 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fandroid-arm64 1604ms (cache miss)
+82 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm64 set size:undefined disposed:false
+83 silly fetch manifest @esbuild/linux-ia32@0.25.9
+84 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ia32 cache-miss
+85 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fdarwin-arm64 1643ms (cache miss)
+86 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-arm64 set size:undefined disposed:false
+87 silly fetch manifest @esbuild/linux-loong64@0.25.9
+88 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-loong64 cache-miss
+89 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fandroid-x64 1733ms (cache miss)
+90 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-x64 set size:undefined disposed:false
+91 silly fetch manifest @esbuild/linux-mips64el@0.25.9
+92 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-mips64el cache-miss
+93 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fdarwin-x64 1758ms (cache miss)
+94 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-x64 set size:undefined disposed:false
+95 silly fetch manifest @esbuild/linux-ppc64@0.25.9
+96 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ppc64 cache-miss
+97 http fetch GET 200 https://registry.npmjs.org/@esbuild%2ffreebsd-arm64 1831ms (cache miss)
+98 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-arm64 set size:undefined disposed:false
+99 silly fetch manifest @esbuild/linux-riscv64@0.25.9
+100 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-riscv64 cache-miss
+101 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fandroid-arm 1927ms (cache miss)
+102 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm set size:undefined disposed:false
+103 silly fetch manifest @esbuild/linux-s390x@0.25.9
+104 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-s390x cache-miss
+105 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-arm64 679ms (cache miss)
+106 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm64 set size:undefined disposed:false
+107 silly fetch manifest @esbuild/linux-x64@0.25.9
+108 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-x64 cache-miss
+109 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-ia32 651ms (cache miss)
+110 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ia32 set size:undefined disposed:false
+111 silly fetch manifest @esbuild/netbsd-arm64@0.25.9
+112 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-arm64 cache-miss
+113 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-mips64el 554ms (cache miss)
+114 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-mips64el set size:undefined disposed:false
+115 silly fetch manifest @esbuild/netbsd-x64@0.25.9
+116 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-x64 cache-miss
+117 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-loong64 679ms (cache miss)
+118 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-loong64 set size:undefined disposed:false
+119 silly fetch manifest @esbuild/openbsd-arm64@0.25.9
+120 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-arm64 cache-miss
+121 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-ppc64 602ms (cache miss)
+122 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ppc64 set size:undefined disposed:false
+123 silly fetch manifest @esbuild/openbsd-x64@0.25.9
+124 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-x64 cache-miss
+125 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-s390x 521ms (cache miss)
+126 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-s390x set size:undefined disposed:false
+127 silly fetch manifest @esbuild/openharmony-arm64@0.25.9
+128 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenharmony-arm64 cache-miss
+129 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-riscv64 798ms (cache miss)
+130 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-riscv64 set size:undefined disposed:false
+131 silly fetch manifest @esbuild/sunos-x64@0.25.9
+132 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fsunos-x64 cache-miss
+133 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fnetbsd-arm64 871ms (cache miss)
+134 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-arm64 set size:undefined disposed:false
+135 silly fetch manifest @esbuild/win32-arm64@0.25.9
+136 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-arm64 cache-miss
+137 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fopenbsd-arm64 847ms (cache miss)
+138 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-arm64 set size:undefined disposed:false
+139 silly fetch manifest @esbuild/win32-ia32@0.25.9
+140 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-ia32 cache-miss
+141 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fopenharmony-arm64 799ms (cache miss)
+142 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenharmony-arm64 set size:undefined disposed:false
+143 silly fetch manifest @esbuild/win32-x64@0.25.9
+144 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-x64 cache-miss
+145 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-x64 1141ms (cache miss)
+146 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-x64 set size:undefined disposed:false
+147 silly fetch manifest ansi-regex@^6.0.1
+148 silly packumentCache full:https://registry.npmjs.org/ansi-regex cache-miss
+149 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fnetbsd-x64 1141ms (cache miss)
+150 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-x64 set size:undefined disposed:false
+151 silly fetch manifest vscode-jsonrpc@8.2.0
+152 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc cache-miss
+153 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fopenbsd-x64 1114ms (cache miss)
+154 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-x64 set size:undefined disposed:false
+155 silly fetch manifest vscode-languageserver-types@3.17.5
+156 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types cache-miss
+157 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fsunos-x64 858ms (cache miss)
+158 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fsunos-x64 set size:undefined disposed:false
+159 silly fetch manifest isexe@^2.0.0
+160 silly packumentCache full:https://registry.npmjs.org/isexe cache-miss
+161 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fwin32-arm64 648ms (cache miss)
+162 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-arm64 set size:undefined disposed:false
+163 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fwin32-x64 555ms (cache miss)
+164 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-x64 set size:undefined disposed:false
+165 http fetch GET 200 https://registry.npmjs.org/ansi-regex 462ms (cache miss)
+166 silly packumentCache full:https://registry.npmjs.org/ansi-regex set size:undefined disposed:false
+167 http fetch GET 200 https://registry.npmjs.org/isexe 317ms (cache miss)
+168 silly packumentCache full:https://registry.npmjs.org/isexe set size:undefined disposed:false
+169 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fwin32-ia32 674ms (cache miss)
+170 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-ia32 set size:undefined disposed:false
+171 http fetch GET 200 https://registry.npmjs.org/vscode-jsonrpc 509ms (cache miss)
+172 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc set size:undefined disposed:false
+173 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-types 502ms (cache miss)
+174 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types set size:undefined disposed:false
+175 silly placeDep ROOT @esbuild/aix-ppc64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+176 silly placeDep ROOT @esbuild/android-arm@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+177 silly placeDep ROOT @esbuild/android-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+178 silly placeDep ROOT @esbuild/android-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+179 silly placeDep ROOT @esbuild/darwin-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+180 silly placeDep ROOT @esbuild/darwin-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+181 silly placeDep ROOT @esbuild/freebsd-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+182 silly placeDep ROOT @esbuild/freebsd-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+183 silly placeDep ROOT @esbuild/linux-arm@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+184 silly placeDep ROOT @esbuild/linux-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+185 silly placeDep ROOT @esbuild/linux-ia32@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+186 silly placeDep ROOT @esbuild/linux-loong64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+187 silly placeDep ROOT @esbuild/linux-mips64el@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+188 silly placeDep ROOT @esbuild/linux-ppc64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+189 silly placeDep ROOT @esbuild/linux-riscv64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+190 silly placeDep ROOT @esbuild/linux-s390x@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+191 silly placeDep ROOT @esbuild/linux-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+192 silly placeDep ROOT @esbuild/netbsd-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+193 silly placeDep ROOT @esbuild/netbsd-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+194 silly placeDep ROOT @esbuild/openbsd-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+195 silly placeDep ROOT @esbuild/openbsd-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+196 silly placeDep ROOT @esbuild/openharmony-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+197 silly placeDep ROOT @esbuild/sunos-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+198 silly placeDep ROOT @esbuild/win32-arm64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+199 silly placeDep ROOT @esbuild/win32-ia32@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+200 silly placeDep ROOT @esbuild/win32-x64@0.25.9 OK for: esbuild@0.25.9 want: 0.25.9
+201 silly placeDep ROOT ansi-regex@6.2.2 OK for: strip-ansi@7.1.2 want: ^6.0.1
+202 silly placeDep ROOT vscode-jsonrpc@8.2.0 OK for: vscode-languageserver-protocol@3.17.5 want: 8.2.0
+203 silly placeDep ROOT vscode-languageserver-types@3.17.5 OK for: vscode-languageserver-protocol@3.17.5 want: 3.17.5
+204 silly placeDep ROOT isexe@2.0.0 OK for: which@2.0.2 want: ^2.0.0
+205 silly reify moves {}
+206 silly reify mark deleted [
+206 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@types/node'
+206 silly reify ]
+207 silly reify mark deleted [
+207 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/coc.nvim'
+207 silly reify ]
+208 silly reify mark deleted [
+208 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/esbuild',
+208 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/.bin/esbuild'
+208 silly reify ]
+209 silly reify mark deleted [
+209 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/semver',
+209 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/.bin/semver'
+209 silly reify ]
+210 silly reify mark deleted [
+210 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/strip-ansi'
+210 silly reify ]
+211 silly reify mark deleted [
+211 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/vscode-languageserver-protocol'
+211 silly reify ]
+212 silly reify mark deleted [
+212 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/which',
+212 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/.bin/node-which'
+212 silly reify ]
+213 silly reify mark deleted [
+213 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/aix-ppc64'
+213 silly reify ]
+214 silly reify mark deleted [
+214 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/android-arm'
+214 silly reify ]
+215 silly reify mark deleted [
+215 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/android-arm64'
+215 silly reify ]
+216 silly reify mark deleted [
+216 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/android-x64'
+216 silly reify ]
+217 silly reify mark deleted [
+217 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/darwin-arm64'
+217 silly reify ]
+218 silly reify mark deleted [
+218 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/darwin-x64'
+218 silly reify ]
+219 silly reify mark deleted [
+219 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/freebsd-arm64'
+219 silly reify ]
+220 silly reify mark deleted [
+220 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/freebsd-x64'
+220 silly reify ]
+221 silly reify mark deleted [
+221 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-arm'
+221 silly reify ]
+222 silly reify mark deleted [
+222 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-arm64'
+222 silly reify ]
+223 silly reify mark deleted [
+223 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-ia32'
+223 silly reify ]
+224 silly reify mark deleted [
+224 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-loong64'
+224 silly reify ]
+225 silly reify mark deleted [
+225 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-mips64el'
+225 silly reify ]
+226 silly reify mark deleted [
+226 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-ppc64'
+226 silly reify ]
+227 silly reify mark deleted [
+227 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-riscv64'
+227 silly reify ]
+228 silly reify mark deleted [
+228 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-s390x'
+228 silly reify ]
+229 silly reify mark deleted [
+229 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/linux-x64'
+229 silly reify ]
+230 silly reify mark deleted [
+230 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/netbsd-arm64'
+230 silly reify ]
+231 silly reify mark deleted [
+231 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/netbsd-x64'
+231 silly reify ]
+232 silly reify mark deleted [
+232 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/openbsd-arm64'
+232 silly reify ]
+233 silly reify mark deleted [
+233 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/openbsd-x64'
+233 silly reify ]
+234 silly reify mark deleted [
+234 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/openharmony-arm64'
+234 silly reify ]
+235 silly reify mark deleted [
+235 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/sunos-x64'
+235 silly reify ]
+236 silly reify mark deleted [
+236 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/win32-arm64'
+236 silly reify ]
+237 silly reify mark deleted [
+237 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/win32-ia32'
+237 silly reify ]
+238 silly reify mark deleted [
+238 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/@esbuild/win32-x64'
+238 silly reify ]
+239 silly reify mark deleted [
+239 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/ansi-regex'
+239 silly reify ]
+240 silly reify mark deleted [
+240 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/vscode-jsonrpc'
+240 silly reify ]
+241 silly reify mark deleted [
+241 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/vscode-languageserver-types'
+241 silly reify ]
+242 silly reify mark deleted [
+242 silly reify   '/home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e/node_modules/isexe'
+242 silly reify ]
+243 silly audit bulk request { typescript: [ '5.9.2' ] }
+244 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.2.tgz 1ms (cache hit)
+245 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.2.tgz. Extracting by manifest.
+246 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 803ms
+247 silly audit report {}
+248 http fetch GET 200 https://registry.npmjs.org/typescript/-/typescript-5.9.2.tgz 4909ms (cache miss)
+249 silly ADD
+250 silly ADD
+251 silly ADD
+252 silly ADD
+253 silly ADD
+254 silly ADD
+255 silly ADD
+256 silly ADD
+257 silly ADD
+258 silly ADD
+259 silly ADD
+260 silly ADD
+261 silly ADD
+262 silly ADD
+263 silly ADD
+264 silly ADD
+265 silly ADD
+266 silly ADD
+267 silly ADD
+268 silly ADD
+269 silly ADD
+270 silly ADD
+271 silly ADD
+272 silly ADD
+273 silly ADD
+274 silly ADD
+275 silly ADD
+276 silly ADD
+277 silly ADD
+278 silly ADD
+279 silly ADD
+280 silly ADD
+281 silly ADD node_modules/typescript
+282 silly ADD
+283 silly ADD
+284 silly ADD
+285 silly ADD
+286 silly ADD
+287 verbose cwd /home/.config/coc/extensions/node_modules/coc-tsserver-23fd38d4-1a82-488a-8759-253f171ff47e
+288 verbose os Linux 6.2.1-PRoot-Distro
+289 verbose node v22.16.0
+290 verbose npm  v11.3.0
+291 verbose exit 0
+292 info ok

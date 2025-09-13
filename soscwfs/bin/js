@@ -1,0 +1,43 @@
+#!/usr/bin/env qjs
+
+import * as std from "std";
+import * as os from "os";
+
+let run = command => {
+  let p = std.popen(command, "r"),
+  msg = "",
+  r = "";
+  while(( r = p.getline() ) != null) {
+    msg += r + "\n";
+  }
+  return msg;
+}
+
+let javascriptFunctions = `import * as std from "std";
+import * as os from "os";
+
+let run = command => {
+  let p = std.popen(command, "r"),
+  msg = "",
+  r = "";
+  while(( r = p.getline() ) != null) {
+    msg += r + "\\n";
+  }
+  return msg;
+}
+`;
+
+let result ="";
+try {
+  let fd = std.open(".internalJsEvaling", "w+");
+  fd.puts(`${javascriptFunctions}${scriptArgs.splice(1,1)}`);
+  fd.close();
+  result = run(`qjs .internalJsEvaling 2>&1`);
+  run("rm .internalJsEvaling");
+
+} catch(err) {
+  result = `Error running the code: ${err}`;
+}
+
+console.log(result);
+

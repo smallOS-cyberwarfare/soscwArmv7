@@ -1,0 +1,18 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@11.3.0
+2 info using node@v22.16.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/root/.npmrc
+5 silly config load:file:/home/.npmrc
+6 silly config load:file:/etc/npmrc
+7 verbose title npm config get prefix
+8 verbose argv "config" "get" "prefix"
+9 verbose logfile logs-max:10 dir:/home/.npm/_logs/2025-09-13T04_53_37_722Z-
+10 verbose logfile /home/.npm/_logs/2025-09-13T04_53_37_722Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose cwd /root
+13 verbose os Linux 6.2.1-PRoot-Distro
+14 verbose node v22.16.0
+15 verbose npm  v11.3.0
+16 verbose exit 0
+17 info ok
