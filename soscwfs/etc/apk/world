@@ -13,6 +13,7 @@ go
 gpg
 gpg-agent
 hydra
+john
 jq
 libc-utils
 make
