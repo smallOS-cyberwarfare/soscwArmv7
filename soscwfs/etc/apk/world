@@ -3,11 +3,13 @@ alpine-keys
 alpine-release
 apk-tools
 bash
+bind-tools
 build-base
 busybox
 curl
 gcc
 git
+go
 gpg
 gpg-agent
 jq
