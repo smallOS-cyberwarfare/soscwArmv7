@@ -23,6 +23,8 @@ nmap-ncat
 nodejs
 npm
 p7zip
+py3-numpy
+py3-pandas
 py3-pip
 python3
 quickjs
