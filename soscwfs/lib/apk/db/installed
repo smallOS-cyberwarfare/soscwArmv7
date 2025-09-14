@@ -17525,6 +17525,54 @@ R:libedit.so.0.0.75
 a:0:0:755
 Z:Q1ECz/h+Qfq8L1lW5tRbkE2BoSFNc=
 
+C:Q1jdsqcQAerQbUVEt/EvdbaSp3x2Q=
+P:libevent
+V:2.1.12-r8
+A:armv7
+S:252998
+I:473636
+T:An event notification library
+U:https://libevent.org/
+L:BSD-3-Clause
+o:libevent
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1737737549
+c:2b84ca9bdc2eb795481c647229835a53a887410d
+D:so:libc.musl-armv7.so.1 so:libcrypto.so.3 so:libssl.so.3
+p:so:libevent-2.1.so.7=7.0.1 so:libevent_core-2.1.so.7=7.0.1 so:libevent_extra-2.1.so.7=7.0.1 so:libevent_openssl-2.1.so.7=7.0.1 so:libevent_pthreads-2.1.so.7=7.0.1
+F:usr
+F:usr/lib
+R:libevent-2.1.so.7
+a:0:0:777
+Z:Q1SYbb938sIjvKXeAQoYKub61pkNU=
+R:libevent-2.1.so.7.0.1
+a:0:0:755
+Z:Q12jx8B8M2tvZtJTK+zcIywkhNYaQ=
+R:libevent_core-2.1.so.7
+a:0:0:777
+Z:Q1lOGFVx6XTrQ8iimIGQ/Tb9U7ISk=
+R:libevent_core-2.1.so.7.0.1
+a:0:0:755
+Z:Q1wiXN53zmwUeRVxQ6wsD60W8FRbE=
+R:libevent_extra-2.1.so.7
+a:0:0:777
+Z:Q1vsuaUOZ09mA+9uRTwKeYoSNR8mQ=
+R:libevent_extra-2.1.so.7.0.1
+a:0:0:755
+Z:Q1VCwuWomoDCcqqKOz8IWa4j/1svw=
+R:libevent_openssl-2.1.so.7
+a:0:0:777
+Z:Q1rCL5pV7gk8c6JT6yGGcL9CQNo3U=
+R:libevent_openssl-2.1.so.7.0.1
+a:0:0:755
+Z:Q1LODnQlRue4lnb+r4CAnX7piATmA=
+R:libevent_pthreads-2.1.so.7
+a:0:0:777
+Z:Q1xM4Q8nnvY9LHYV0iBhoC4vtQAIM=
+R:libevent_pthreads-2.1.so.7.0.1
+a:0:0:755
+Z:Q1a74Q1cVrU+1ZJD+CbGsMXaZ5zSo=
+
 C:Q1oMWKMgDPtBaQUmoHsrKwbAP1Nr4=
 P:libexpat
 V:2.7.1-r0
@@ -18127,6 +18175,34 @@ Z:Q1Y5vtFnakiyZf0P84O8G71XevCFg=
 R:libsasldb.so.3.0.0
 a:0:0:755
 Z:Q1/t9LZhdl6WcT4f2NTYUqJEG/g8k=
+
+C:Q1y/dyrTO/Dq39GTXSiiS/2WExrMo=
+P:libseccomp
+V:2.6.0-r0
+A:armv7
+S:48496
+I:141708
+T:interface to the Linux Kernel's syscall filtering mechanism
+U:https://github.com/seccomp/libseccomp
+L:LGPL-2.1-or-later
+o:libseccomp
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1737821985
+c:ee204a2d3d0b5a2617097345abbf85c4fc0d8f26
+D:so:libc.musl-armv7.so.1
+p:so:libseccomp.so.2=2.6.0 cmd:scmp_sys_resolver=2.6.0-r0
+F:usr
+F:usr/bin
+R:scmp_sys_resolver
+a:0:0:755
+Z:Q1ycWbYRFn3TAocdrSnnXxZYG+/uQ=
+F:usr/lib
+R:libseccomp.so.2
+a:0:0:777
+Z:Q1tDmm3sQws3q9jqOZmZP84JUiodY=
+R:libseccomp.so.2.6.0
+a:0:0:755
+Z:Q1sbkReG95jBwzDsqCCcKhSyh5MQI=
 
 C:Q1YttumcEp/FydJEdh4fyI3LFUZM8=
 P:libsmbclient
@@ -21040,6 +21116,32 @@ a:0:0:777
 Z:Q1SyosgzYBMBewV7lYn+6JOPnBG24=
 R:liblua-5.4.so.0.0.0
 Z:Q18QfPg7axByrTMxFW9Lx+qu1+zKc=
+
+C:Q15bK/VFW0G8QWwXV1GMeeHfuc8g8=
+P:lynx
+V:2.9.2-r1
+A:armv7
+S:646184
+I:1277741
+T:Cross-platform text-based browser
+U:https://lynx.invisible-island.net/
+L:GPL-2.0-only
+o:lynx
+m:Sheila Aman <sheila@vulpine.house>
+t:1739309227
+c:28e68fa019b5d4c675ae1aff1a53f559a3f08b30
+D:so:libbz2.so.1 so:libc.musl-armv7.so.1 so:libcrypto.so.3 so:libintl.so.8 so:libncursesw.so.6 so:libssl.so.3 so:libz.so.1
+p:cmd:lynx=2.9.2-r1
+F:etc
+R:lynx.cfg
+Z:Q1v5hKXQOC+9m5g3EGZitBoemued0=
+R:lynx.lss
+Z:Q1mxMLBuVDWTH3qExUd6TZ+9po3nU=
+F:usr
+F:usr/bin
+R:lynx
+a:0:0:755
+Z:Q16FCvfsSwScdpRf7YFj2SAHxQQRI=
 
 C:Q1Y36zkCMHfMEP7zTUbiuNOtK+WJo=
 P:lz4-libs
@@ -26222,6 +26324,194 @@ R:libOpenCL.so.1.2
 a:0:0:755
 Z:Q1C8fqabrgqYs8n8FLtwYaUoZFWDA=
 
+C:Q1mqcm5l/ud+1KnwaLO/fm0JW85zE=
+P:openssh
+V:10.0_p1-r7
+A:armv7
+S:126236
+I:267704
+T:Port of OpenBSD's free SSH release
+U:https://www.openssh.com/portable.html
+L:SSH-OpenSSH
+o:openssh
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1748289885
+c:d17f5face4d9859574d68d4821ca5f128f79bb2e
+D:openssh-client openssh-sftp-server openssh-server so:libc.musl-armv7.so.1 so:libcrypto.so.3
+F:usr
+F:usr/lib
+F:usr/lib/ssh
+R:ssh-pkcs11-helper
+a:0:0:755
+Z:Q1Ha046CFM+F8Bysnm4BaG+UMTQtw=
+F:var
+F:var/empty
+
+C:Q1Khk5T+FEduwbRvIMRC14pk2vsgM=
+P:openssh-client-common
+V:10.0_p1-r7
+A:armv7
+S:784435
+I:2104875
+T:OpenBSD's SSH client common files
+U:https://www.openssh.com/portable.html
+L:SSH-OpenSSH
+o:openssh
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1748289885
+c:d17f5face4d9859574d68d4821ca5f128f79bb2e
+D:libcrypto3>=3.1.0 so:libc.musl-armv7.so.1 so:libcrypto.so.3 so:libedit.so.0 so:libz.so.1
+p:cmd:findssl.sh=10.0_p1-r7 cmd:scp=10.0_p1-r7 cmd:sftp=10.0_p1-r7 cmd:ssh-add=10.0_p1-r7 cmd:ssh-agent=10.0_p1-r7 cmd:ssh-copy-id=10.0_p1-r7 cmd:ssh-keyscan=10.0_p1-r7 cmd:ssh-pkcs11-helper=10.0_p1-r7
+F:etc
+F:etc/ssh
+R:moduli
+Z:Q1uth2RhQqdUMlEv31tv5p9NPHWF4=
+R:ssh_config
+Z:Q1FooZ7Czzq3uwcVhaZ14Pcg4ORgg=
+F:etc/ssh/ssh_config.d
+F:usr
+F:usr/bin
+R:findssl.sh
+a:0:0:755
+Z:Q118AJVSk4PVi6+adyZ8y8zWFVB/k=
+R:scp
+a:0:0:755
+Z:Q1B32y+jW1PsAPV5Lyfhexwy2jFSk=
+R:sftp
+a:0:0:755
+Z:Q1/OL4FqBPrU31NjOWcXVUilPbNHU=
+R:ssh-add
+a:0:0:755
+Z:Q1nn3G55E3x33TKs33xDRWTR8FcH4=
+R:ssh-agent
+a:0:0:755
+Z:Q1C9vIGNdJl5DY9rqt1ju3usemXvU=
+R:ssh-copy-id
+a:0:0:755
+Z:Q14+7NX/QEHsRYd7g3bPdnlLwuiZY=
+R:ssh-keyscan
+a:0:0:755
+Z:Q14XNz0WWcnJ+JcIuPG2WyJ0De+KM=
+R:ssh-pkcs11-helper
+a:0:0:755
+Z:Q1Ha046CFM+F8Bysnm4BaG+UMTQtw=
+F:usr/lib
+F:usr/lib/ssh
+F:var
+F:var/empty
+
+C:Q1PqGOPQUCZ8nWTX+o5wtV1jGCbGA=
+P:openssh-client-default
+V:10.0_p1-r7
+A:armv7
+S:354477
+I:648972
+T:OpenBSD's SSH client
+U:https://www.openssh.com/portable.html
+L:SSH-OpenSSH
+o:openssh
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1748289885
+c:d17f5face4d9859574d68d4821ca5f128f79bb2e
+k:2
+D:openssh-keygen=10.0_p1-r7 openssh-client-common=10.0_p1-r7 !openssh-client-krb5 so:libc.musl-armv7.so.1 so:libcrypto.so.3 so:libz.so.1
+p:openssh-client=10.0_p1-r7 cmd:ssh=10.0_p1-r7
+F:usr
+F:usr/bin
+R:ssh
+a:0:0:755
+Z:Q1S5iBwGvJYykrMaRODzrn8o+sAgk=
+
+C:Q1JCufdUliZjjAFJlrpn54QtKmSHw=
+P:openssh-keygen
+V:10.0_p1-r7
+A:armv7
+S:188461
+I:374284
+T:ssh helper program for generating keys
+U:https://www.openssh.com/portable.html
+L:SSH-OpenSSH
+o:openssh
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1748289885
+c:d17f5face4d9859574d68d4821ca5f128f79bb2e
+D:libcrypto3>=3.1.0 so:libc.musl-armv7.so.1 so:libcrypto.so.3
+p:cmd:ssh-keygen=10.0_p1-r7
+F:usr
+F:usr/bin
+R:ssh-keygen
+a:0:0:755
+Z:Q1T55jCvNCN0tjwbBuW1gVHJbzTfg=
+
+C:Q1TtnKsh5lFh+jPG2TF+zrFOoUU7o=
+P:openssh-server
+V:10.0_p1-r7
+A:armv7
+S:891091
+I:1672696
+T:OpenSSH server
+U:https://www.openssh.com/portable.html
+L:SSH-OpenSSH
+o:openssh
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1748289885
+c:d17f5face4d9859574d68d4821ca5f128f79bb2e
+D:openssh-keygen=10.0_p1-r7 openssh-server-common=10.0_p1-r7 /bin/sh so:libc.musl-armv7.so.1 so:libcrypto.so.3 so:libz.so.1
+p:cmd:sshd=10.0_p1-r7
+F:usr
+F:usr/lib
+F:usr/lib/ssh
+R:sshd-auth
+a:0:0:755
+Z:Q1KzGFSKtzPeoRQH1wwqnukcUiyOs=
+R:sshd-session
+a:0:0:755
+Z:Q180hczLUCBPOa5xwjc+MaB4H+1/0=
+F:usr/sbin
+R:sshd
+a:0:0:755
+Z:Q12X2tO61+1ZV7u3opfFRgk+CgIzk=
+
+C:Q17JsfFuiQmPKeab6l5i1oxA15p4g=
+P:openssh-server-common
+V:10.0_p1-r7
+A:armv7
+S:3176
+I:3542
+T:OpenSSH server configuration files
+U:https://www.openssh.com/portable.html
+L:SSH-OpenSSH
+o:openssh
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1748289885
+c:d17f5face4d9859574d68d4821ca5f128f79bb2e
+F:etc
+F:etc/ssh
+R:sshd_config
+Z:Q1Gox1iUVcoeZ4h/OJfV9jx6oFkAg=
+F:etc/ssh/sshd_config.d
+
+C:Q1uHJmii0OvKgDoTecvbCvmTf/ZJ8=
+P:openssh-sftp-server
+V:10.0_p1-r7
+A:armv7
+S:56047
+I:95568
+T:ssh sftp server module
+U:https://www.openssh.com/portable.html
+L:SSH-OpenSSH
+o:openssh
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1748289885
+c:d17f5face4d9859574d68d4821ca5f128f79bb2e
+D:so:libc.musl-armv7.so.1
+F:usr
+F:usr/lib
+F:usr/lib/ssh
+R:sftp-server
+a:0:0:755
+Z:Q1bFZtOriAlhjGH/N+URFEBKhw3d0=
+
 C:Q1lw9hloCdYJn9Q51EczHd0CaMOqY=
 P:openssl
 V:3.5.2-r0
@@ -31213,6 +31503,27 @@ Z:Q1Pm7iv3Ut44Zura04AMUNqb3wA6s=
 R:libprotobuf-c.so.1.0.0
 a:0:0:755
 Z:Q1fiXKzbETNpoqITi02tYgogM7vn0=
+
+C:Q1io44NGbo4uMWts37v2vL2QQyKfg=
+P:pup
+V:0.4.0-r33
+A:armv7
+S:1342234
+I:3142976
+T:HTML parser for the command line
+U:https://github.com/ericchiang/pup
+L:MIT
+o:pup
+m:Erwan Rouchet <lucidiot@brainshit.fr>
+t:1757169767
+c:16aae9b977ed4165d77afa30b5f0e1740b095a11
+D:so:libc.musl-armv7.so.1
+p:cmd:pup=0.4.0-r33
+F:usr
+F:usr/bin
+R:pup
+a:0:0:755
+Z:Q1IN+tM4cvyh3b6NmNS5VyF97dZTY=
 
 C:Q1bRkLoR2uA7Dn8E1QhlGc/NPWUks=
 P:py3-attrs
@@ -48929,6 +49240,115 @@ Z:Q1LBOBBXUZMF9QUvLt0nYSg0SGRqc=
 R:libtevent.so.0.16.1
 a:0:0:755
 Z:Q1gC/WCrZPwiV3wSW6J5DAaLOzt3k=
+
+C:Q1570H3w/5yZbp0XgxOcFNA9cIvqM=
+P:tmux
+V:3.5a-r1
+A:armv7
+S:321049
+I:574704
+T:Tool to control multiple terminals from a single terminal
+U:https://tmux.github.io
+L:ISC
+o:tmux
+m:Celeste <cielesti@protonmail.com>
+t:1747304947
+c:be0833caee3020f089f02c5d7223e971a9a11ffb
+D:ncurses-terminfo-base so:libc.musl-armv7.so.1 so:libevent_core-2.1.so.7 so:libncursesw.so.6
+p:cmd:tmux=3.5a-r1
+F:usr
+F:usr/bin
+R:tmux
+a:0:0:755
+Z:Q1+92xIHeIm54NyTJlZNogkcw6JyY=
+
+C:Q1gf8OGwVMlSj/YeOOvYnkoeddVEs=
+P:tor
+V:0.4.8.17-r0
+A:armv7
+S:5638080
+I:24251103
+T:Anonymous network connectivity
+U:https://www.torproject.org/
+L:BSD-3-Clause AND GPL-3.0-only
+o:tor
+m:omni <omni+alpine@hack.org>
+t:1751308598
+c:1edb04e3496a5cb1b0114cd442ffb660d906bc25
+D:/bin/sh so:libc.musl-armv7.so.1 so:libcap.so.2 so:libcrypto.so.3 so:libevent-2.1.so.7 so:libgcc_s.so.1 so:liblzma.so.5 so:libseccomp.so.2 so:libssl.so.3 so:libz.so.1 so:libzstd.so.1
+p:cmd:tor-gencert=0.4.8.17-r0 cmd:tor-print-ed-signing-cert=0.4.8.17-r0 cmd:tor-resolve=0.4.8.17-r0 cmd:tor=0.4.8.17-r0 cmd:torify=0.4.8.17-r0
+F:etc
+F:etc/tor
+R:torrc.sample
+Z:Q1Kptqxz+rK1WV58BY04TTQv5P00g=
+F:usr
+F:usr/bin
+R:tor
+a:0:0:755
+Z:Q1s6cM3sKoA+ZUgkJXZhc4vxKn0Y4=
+R:tor-gencert
+a:0:0:755
+Z:Q1Z+UV+TSO6iwbwr4/4zB0apXfXQw=
+R:tor-print-ed-signing-cert
+a:0:0:755
+Z:Q18WMlS+E5O7v4+Lpyi+MSlbQXwMk=
+R:tor-resolve
+a:0:0:755
+Z:Q1xeil4rnwdCqBKJ2c+dft2KVEAo0=
+R:torify
+a:0:0:755
+Z:Q13jBSbBDEoNlm4H+PBuzeXpZVYVI=
+F:usr/share
+F:usr/share/tor
+R:geoip
+Z:Q1VIYEJHQs3RaPW6YP6uirUCjyqe0=
+R:geoip6
+Z:Q1dbVFp3Ba3kZb0ZsAYdJAZ5fFMhM=
+F:var
+F:var/lib
+F:var/lib/tor
+M:100:0:755
+F:var/log
+F:var/log/tor
+M:100:0:755
+
+C:Q1tU7AA1B3Afn5trTfPZdMzblTsmA=
+P:torsocks
+V:2.5.0-r0
+A:armv7
+S:76095
+I:199886
+T:Wrapper to safely torify applications
+U:https://gitlab.torproject.org/tpo/core/torsocks
+L:GPL-2.0
+o:torsocks
+m:omni <omni+alpine@hack.org>
+t:1748130601
+c:9a0f8d02f2496787e615ad697175900e27f61b62
+D:so:libc.musl-armv7.so.1
+p:cmd:torsocks=2.5.0-r0
+F:etc
+F:etc/tor
+R:torsocks.conf
+Z:Q1yMV+jrMkkKU5eCmhYNY7+Qthhn4=
+F:usr
+F:usr/bin
+R:torsocks
+a:0:0:755
+Z:Q1LRqQvalMWJACfxMX6bKfjq6AGbQ=
+F:usr/lib
+F:usr/lib/torsocks
+R:libtorsocks.a
+Z:Q1Fuz4MSkqQNLW8Mx5MmKnSxfmZYo=
+R:libtorsocks.so
+a:0:0:777
+Z:Q1gGvp2whUn/wp0VBJAnZpEka3wzY=
+R:libtorsocks.so.0
+a:0:0:777
+Z:Q1gGvp2whUn/wp0VBJAnZpEka3wzY=
+R:libtorsocks.so.0.0.0
+a:0:0:755
+Z:Q1mZLQguh2Mmh3JJpSSGytpeoJY+g=
 
 C:Q1vQVvfoZp1Gneoxt+EHO6Y9WvV/o=
 P:userspace-rcu
