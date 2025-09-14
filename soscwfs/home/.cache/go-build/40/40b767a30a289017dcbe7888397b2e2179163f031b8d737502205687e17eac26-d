@@ -1,0 +1,11 @@
+./banner.go
+./cloud.go
+./defaults.go
+./doc.go
+./enumerate.go
+./healthcheck.go
+./inputs.go
+./options.go
+./proxy.go
+./runner.go
+./templates.go

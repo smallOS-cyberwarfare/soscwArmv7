@@ -1,0 +1,35 @@
+id: costa-phish
+
+info:
+  name: costa phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A costa phishing website was detected
+  reference:
+    - https://costa.co.uk
+  metadata:
+    max-request: 1
+  tags: phishing,costa,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'The Nation&#x27;s Favourite Coffee Shop | Costa Coffee'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"costa.co.uk")'
+# digest: 4a0a00473045022100b5e7073e36dfcea9dc4fc146ec80cb5b7ae77e9261155b31cb9f576aedbcdb1702207d3cadfa86d301c83db42349f38a9d46f2048b09c09ee73ad68d1e104cfcec7c:922c64590222798bb761d5b6d8e72950

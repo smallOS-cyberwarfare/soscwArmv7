@@ -1,0 +1,35 @@
+id: royal-mail-phish
+
+info:
+  name: royal-mail phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A royal-mail phishing website was detected
+  reference:
+    - https://royalmail.com
+  metadata:
+    max-request: 1
+  tags: phishing,royal-mail,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Log in | Royal Mail Group Ltd'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"royalmail.com")'
+# digest: 4a0a0047304502207b41033502727495325c0b6107b09851f66346be9fa5f1c0f8454eb1e65773e7022100e57e7b5ab8cfddbe1e1a650367f64b394fb3990cba0ff7bbe766b2e7bf757931:922c64590222798bb761d5b6d8e72950

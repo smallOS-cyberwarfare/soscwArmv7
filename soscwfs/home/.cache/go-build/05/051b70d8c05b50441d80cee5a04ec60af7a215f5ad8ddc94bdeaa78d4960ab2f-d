@@ -1,0 +1,7 @@
+./client.go
+./client_queue.go
+./connpool.go
+./options.go
+./resolver.go
+./root.go
+./validate.go

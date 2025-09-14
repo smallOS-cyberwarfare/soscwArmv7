@@ -1,0 +1,4 @@
+./constants.go
+./ignorefile.go
+./nucleiconfig.go
+./template.go

@@ -1,0 +1,14 @@
+./api.go
+./arn.go
+./bucket_region.go
+./buffered_read_seeker.go
+./default_read_seeker_write_to.go
+./default_writer_read_from.go
+./doc.go
+./download.go
+./go_module_metadata.go
+./pool.go
+./read_seeker_write_to.go
+./types.go
+./upload.go
+./writer_read_from.go

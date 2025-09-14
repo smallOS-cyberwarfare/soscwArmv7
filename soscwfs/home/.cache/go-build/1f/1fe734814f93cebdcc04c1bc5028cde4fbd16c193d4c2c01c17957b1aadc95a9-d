@@ -1,0 +1,3 @@
+./cpuid.go
+./detect_ref.go
+./featureid_string.go

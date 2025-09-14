@@ -1,0 +1,10 @@
+./byteorder.go
+./cpu.go
+./cpu_arm.go
+./cpu_linux.go
+./cpu_linux_arm.go
+./endian_little.go
+./hwcap_linux.go
+./parse.go
+./runtime_auxv.go
+./runtime_auxv_go121.go

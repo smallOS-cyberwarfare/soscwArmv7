@@ -1,0 +1,65 @@
+{
+  "gop print": {
+    "prefix": "gp",
+    "body": [
+      "gop.P($0)"
+    ]
+  },
+  "got setup": {
+    "prefix": "gsetup",
+    "body": [
+      "package ${0:example}_test",
+      "",
+      "import (",
+      "\t\"time\"",
+      "",
+      "\t\"github.com/ysmood/got\"",
+      "\t\"github.com/ysmood/gotrace\"",
+      ")",
+      "",
+      "func init() {",
+      "\t// Set default timeout for the entire \"go test\"",
+      "\tgot.DefaultFlags(\"timeout=10s\")",
+      "}",
+      "",
+      "var setup = got.Setup(func(g got.G) {",
+      "\t// The function passed to it will be surely executed after the test",
+      "\tg.Cleanup(func() {})",
+      "",
+      "\t// Concurrently run each test",
+      "\tg.Parallel()",
+      "",
+      "\t// Make sure there's no goroutine leak for each test",
+      "\tgotrace.CheckLeak(g, 0)",
+      "",
+      "\t// Timeout for each test",
+      "\tg.PanicAfter(time.Second)",
+      "})",
+      ""
+    ]
+  },
+  "got test function": {
+    "prefix": "gt",
+    "body": [
+      "",
+      "func Test$1(t *testing.T) {",
+      "\tg := got.T(t)",
+      "",
+      "\t${0:g.Eq(1, 1)}",
+      "}",
+      ""
+    ]
+  },
+  "got test function with setup": {
+    "prefix": "gts",
+    "body": [
+      "",
+      "func Test$1(t *testing.T) {",
+      "\tg := setup(t)",
+      "",
+      "\t${0:g.Eq(1, 1)}",
+      "}",
+      ""
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+./archiver.go
+./bz2.go
+./filecompressor.go
+./gz.go
+./lz4.go
+./rar.go
+./sz.go
+./tar.go
+./tarbz2.go
+./targz.go
+./tarlz4.go
+./tarsz.go
+./tarxz.go
+./xz.go
+./zip.go

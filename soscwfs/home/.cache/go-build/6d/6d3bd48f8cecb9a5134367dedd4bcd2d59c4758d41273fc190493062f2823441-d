@@ -1,0 +1,5 @@
+./azure_blob.go
+./github.go
+./gitlab.go
+./s3.go
+./templates_provider.go

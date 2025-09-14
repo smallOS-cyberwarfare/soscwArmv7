@@ -1,0 +1,6 @@
+./callbacks.go
+./clistats.go
+./doc.go
+./fields.go
+./options.go
+./util.go

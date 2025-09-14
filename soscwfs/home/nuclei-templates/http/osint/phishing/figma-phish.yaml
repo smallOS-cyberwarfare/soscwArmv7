@@ -1,0 +1,35 @@
+id: figma-phish
+
+info:
+  name: figma phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A figma phishing website was detected
+  reference:
+    - https://figma.com
+  metadata:
+    max-request: 1
+  tags: phishing,figma,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Figma: The Collaborative Interface Design Tool'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"figma.com")'
+# digest: 4a0a0047304502200f2e4df28ce272ceed30ab7ebdd2760b21964e4ab14afe60e2329e8e7c596d6d022100be3c7384d3e84dc9a651667c4783e332727002cbb6a06386508c730471a271e1:922c64590222798bb761d5b6d8e72950

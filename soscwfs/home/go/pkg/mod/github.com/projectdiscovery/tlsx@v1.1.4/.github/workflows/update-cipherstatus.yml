@@ -1,0 +1,57 @@
+name: 📝 CipherStatus Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'
+
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
+jobs:
+  cipherstatus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 1.20.x
+
+      - name: install update-cipherstatus
+        run: |
+          go install github.com/projectdiscovery/tlsx/cmd/update-cipherstatus
+
+      - name: update cipherstatus changes
+        run: |
+          update-cipherstatus -out-ciphers ./assets/cipherstatus_data.json
+        working-directory: .
+
+      - name: create local changes
+        run: |
+          git add ./assets/cipherstatus_data.json
+
+      - name: check for local changes
+        id: change
+        run: |
+          git status -s | wc -l | xargs -I {} echo CHANGES={} >> $GITHUB_OUTPUT
+
+      - name: Commit files
+        if: steps.change.outputs.CHANGES > 0
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Weekly cipherstatus update [$(date)] :robot:" -a --allow-empty
+
+      - name: Push changes
+        if: steps.change.outputs.CHANGES > 0
+        run: |
+          git pull --rebase
+          git push origin ${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

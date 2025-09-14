@@ -1,0 +1,28 @@
+id: teamspeak3-detect
+
+info:
+  name: TeamSpeak 3 ServerQuery Detection
+  author: pussycat0x
+  severity: info
+  description: |
+    ServerQuery is a commandline based administration tool/feature of TeamSpeak 3 server.
+  metadata:
+    verified: true
+    max-request: 1
+    shodan-query: product:"TeamSpeak 3 ServerQuery"
+  tags: network,service,teamspeak3,detect,detection,tcp
+tcp:
+  - inputs:
+      - data: "\r\n"
+
+    host:
+      - "{{Hostname}}"
+    port: 2002
+
+    matchers:
+      - type: word
+        words:
+          - "TS3"
+          - "TeamSpeak 3 ServerQuery interface"
+        condition: and
+# digest: 4a0a0047304502201563bd71eabdb744f5accdc6a4175633c3d1c5876660495c0a174a8086e70e6102210080b1839c37593db8ee7dd8c10a578a4ee66b46dfa51b08e0a598d2279bff0ff3:922c64590222798bb761d5b6d8e72950

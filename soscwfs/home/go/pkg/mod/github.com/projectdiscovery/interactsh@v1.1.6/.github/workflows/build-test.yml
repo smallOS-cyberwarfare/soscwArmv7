@@ -1,0 +1,47 @@
+name: 🔨 Build Test
+
+on:
+  pull_request:
+    paths:
+      - '**.go'
+      - '**.mod'
+  workflow_dispatch:
+
+jobs:  
+  build:
+    name: Test Builds
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 1.20.x
+
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: go build ./...
+        working-directory: .
+      
+      - name: Test
+        run: go test ./...
+        working-directory: .
+
+      # Todo
+      # - name: Integration Tests
+      #   env:
+      #     GH_ACTION: true
+      #   run: bash run.sh
+      #   working-directory: integration_tests/
+
+      - name: Race Condition Tests
+        run: go build -race ./...
+        working-directory: .
+
+      - name: Example Code Tests
+        run: go build .
+        working-directory: examples/

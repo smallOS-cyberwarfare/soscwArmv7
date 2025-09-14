@@ -1,0 +1,4 @@
+./term.go
+./term_linux.go
+./term_nix.go
+./term_x.go

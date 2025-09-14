@@ -1,0 +1,38 @@
+id: steam-phish
+
+info:
+  name: steam phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A steam phishing website was detected
+  reference:
+    - https://steampowered.com
+  metadata:
+    max-request: 1
+  tags: phishing,steam,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Welcome to Steam'
+          - 'Steam is the ultimate destination for playing, discussing, and creating games.'
+        condition: and
+
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"steampowered.com")'
+# digest: 4a0a0047304502200f20b9c0e04824866eab53a6422b8329c6880cca80c73d5738b24132bcdee6230221009853ff7dd509191bca7420da187078466a212e78222a709f6bcde86bf9d1fa9c:922c64590222798bb761d5b6d8e72950

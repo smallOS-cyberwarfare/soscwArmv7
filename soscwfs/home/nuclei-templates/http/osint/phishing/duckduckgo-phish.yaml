@@ -1,0 +1,35 @@
+id: duckduckgo-phish
+
+info:
+  name: duckduckgo phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A duckduckgo phishing website was detected
+  reference:
+    - https://duckduckgo.com
+  metadata:
+    max-request: 1
+  tags: phishing,duckduckgo,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'DuckDuckGo — Privacy, simplified.'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"duckduckgo.com")'
+# digest: 490a0046304402203b2534814a1028cdb2453bda87a59127cf0614f1f5a1ac48a8260c85a8dde95a0220638bb881e1464eaf0d287531668f524a7e935f27edfb1a3e328f6c39840c036b:922c64590222798bb761d5b6d8e72950

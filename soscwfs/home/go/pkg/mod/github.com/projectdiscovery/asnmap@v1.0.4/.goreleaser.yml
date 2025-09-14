@@ -1,0 +1,32 @@
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+- binary: '{{ .ProjectName }}'
+  main: cmd/asnmap/asnmap.go
+
+# release options (https://goreleaser.com/customization/release/)
+
+release:
+  draft: false
+  prerelease: auto
+
+archives:
+- format: zip
+  replacements:
+      darwin: macOS
+
+checksum:
+  algorithm: sha256
+
+announce:
+  slack:
+    enabled: true
+    channel: '#release'
+    username: GoReleaser
+    message_template: 'New Release: {{ .ProjectName }} {{.Tag}} is published! Check it out at {{ .ReleaseURL }}'
+
+  discord:
+    enabled: true
+    message_template: '**New Release: {{ .ProjectName }} {{.Tag}}** is published! Check it out at {{ .ReleaseURL }}'

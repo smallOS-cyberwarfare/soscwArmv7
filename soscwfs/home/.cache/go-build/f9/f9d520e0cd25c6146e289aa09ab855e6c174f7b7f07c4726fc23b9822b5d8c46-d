@@ -1,0 +1,3 @@
+./cli.go
+./filewithrotation.go
+./writer.go

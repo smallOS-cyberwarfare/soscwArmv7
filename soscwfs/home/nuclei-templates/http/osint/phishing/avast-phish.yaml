@@ -1,0 +1,35 @@
+id: avast-phish
+
+info:
+  name: avast phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    An avast phishing website was detected
+  reference:
+    - https://avast.com
+  metadata:
+    max-request: 1
+  tags: phishing,avast,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Avast | Download Free Antivirus &amp; VPN | 100% Free &amp; Easy'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"avast.com")'
+# digest: 4a0a00473045022100d3f1728dd39a81d482654dd14a25875d9882e5622da4ae18451585b8b135c93f0220068210b7acb6ec66d950358a33df15607b5706041d5bef6f6b5084677d093029:922c64590222798bb761d5b6d8e72950

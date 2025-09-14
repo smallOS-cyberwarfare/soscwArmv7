@@ -1,0 +1,35 @@
+id: firefox-phish
+
+info:
+  name: firefox phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A firefox phishing website was detected
+  reference:
+    - https://www.mozilla.org/en-GB/firefox/new/
+  metadata:
+    max-request: 1
+  tags: phishing,firefox,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Download Firefox for Desktop — Mozilla'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"mozilla.org")'
+# digest: 490a004630440220645bc64e793fdd58dfcbc65a568b022e3bb824badda1da1b6f07aa6dc469d2db0220082b27eae609008f2c2a7fdab8429178c383660f8013c70d1e5382710f69c622:922c64590222798bb761d5b6d8e72950

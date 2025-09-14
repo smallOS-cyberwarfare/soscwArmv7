@@ -1,0 +1,6 @@
+./endpointtype_string.go
+./mex_document_definitions.go
+./saml_assertion_definitions.go
+./version_string.go
+./wstrust_endpoint.go
+./wstrust_mex_document.go
