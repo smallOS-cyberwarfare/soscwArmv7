@@ -1,0 +1,8 @@
+./dec_bcj.go
+./dec_delta.go
+./dec_lzma2.go
+./dec_stream.go
+./dec_util.go
+./dec_xz.go
+./doc.go
+./reader.go

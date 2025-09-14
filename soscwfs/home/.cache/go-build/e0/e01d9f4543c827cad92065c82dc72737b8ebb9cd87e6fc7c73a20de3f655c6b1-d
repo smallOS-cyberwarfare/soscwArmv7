@@ -1,0 +1,9 @@
+./ascii.go
+./base64.go
+./decoder.go
+./encodings.go
+./hex.go
+./percent.go
+./segment.go
+./start_end.go
+./unicode.go

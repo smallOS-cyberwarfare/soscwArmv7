@@ -1,0 +1,9 @@
+./apply.go
+./base85.go
+./binary.go
+./file_header.go
+./gitdiff.go
+./io.go
+./parser.go
+./patch_header.go
+./text.go

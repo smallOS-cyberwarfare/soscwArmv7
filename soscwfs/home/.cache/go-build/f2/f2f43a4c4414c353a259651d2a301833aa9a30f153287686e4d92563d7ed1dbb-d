@@ -1,0 +1,5 @@
+./reader.go
+./register.go
+./struct.go
+./updater.go
+./writer.go

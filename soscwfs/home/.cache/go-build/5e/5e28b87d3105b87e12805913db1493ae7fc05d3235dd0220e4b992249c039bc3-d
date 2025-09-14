@@ -1,0 +1,7 @@
+./arm.go
+./bcj.go
+./bra.go
+./minmax_compat.go
+./ppc.go
+./reader.go
+./sparc.go

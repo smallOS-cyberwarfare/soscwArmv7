@@ -1,0 +1,14 @@
+./asm_none.go
+./decode.go
+./decode_other.go
+./dict.go
+./encode.go
+./encode_l1.go
+./encode_l2.go
+./encode_l3.go
+./index.go
+./lz4convert.go
+./minlz.go
+./reader.go
+./unsafe_disabled.go
+./writer.go

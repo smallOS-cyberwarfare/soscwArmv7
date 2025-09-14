@@ -1,0 +1,6 @@
+./bufreaderat.go
+./countingreader.go
+./fakeseeker.go
+./multireaderat.go
+./readersize.go
+./readerutil.go

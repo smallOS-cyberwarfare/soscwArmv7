@@ -1,0 +1,8 @@
+./detect.go
+./diagnostics.go
+./directory.go
+./git.go
+./protect.go
+./root.go
+./stdin.go
+./version.go

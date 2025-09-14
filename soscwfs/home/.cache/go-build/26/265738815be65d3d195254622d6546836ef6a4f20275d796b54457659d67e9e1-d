@@ -1,0 +1,4 @@
+./allowlist.go
+./config.go
+./rule.go
+./utils.go

@@ -1,0 +1,6 @@
+./common.go
+./file.go
+./files.go
+./fragment.go
+./git.go
+./source.go

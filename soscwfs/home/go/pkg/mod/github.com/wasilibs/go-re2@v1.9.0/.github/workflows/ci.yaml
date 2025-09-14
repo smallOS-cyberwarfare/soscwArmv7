@@ -1,0 +1,116 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        mode:
+          - cgo
+          - wazero
+        os:
+          - macos-13
+          - macos-14
+          - ubuntu-22.04
+          - windows-2022
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/setup-go@3041bf56c941b39c61721a86cd11f3bb1338122a # v5
+        with:
+          # TODO: Split lint step to allow it to have a higher minimum Go requirement.
+          go-version: "^1.22"
+          cache-dependency-path: |
+            **/go.sum
+            build/versions.go
+
+      - name: setup re2 for cgo (linux)
+        if: ${{ startsWith(matrix.os, 'ubuntu-') && matrix.mode == 'cgo' }}
+        run: sudo apt-get update && sudo apt-get install -y libre2-dev
+      - name: setup re2 for cgo (mac)
+        if: ${{ startsWith(matrix.os, 'macos-') && matrix.mode == 'cgo' }}
+        run: brew install re2
+      - name: setup msys2 for cgo (windows)
+        if: ${{ startsWith(matrix.os, 'windows-') && matrix.mode == 'cgo' }}
+        uses: msys2/setup-msys2@d44ca8e88d8b43d56cf5670f91747359d5537f97 # v2
+        with:
+          update: true
+          # This version of go is not sync with setup-go, but this is probably the best we can do
+          pacboy: gcc:p re2:p go:p pkg-config:p diffutils:p
+
+      - name: run checks
+        run: go run ./build ${{ startsWith(matrix.os, 'ubuntu-') && 'check' || 'test' }}
+        if: ${{ !startsWith(matrix.os, 'windows-') || matrix.mode != 'cgo' }}
+        env:
+          RE2_TEST_MODE: ${{ matrix.mode }}
+          # General coverage should be good enough to not need to slow down development
+          # on these slow tests.
+          RE2_TEST_EXHAUSTIVE: ${{ github.event_name != 'pull_request' && '1' || '0'}}
+          # Windows runner seems to not have enough CPU performance to keep up without a memory limit
+          GOMEMLIMIT: ${{ github.event_name != 'pull_request' && '1GiB' || '' }}
+          # Race detector currently fails with Windows
+          TEST_NORACE: ${{ startsWith(matrix.os, 'windows-') && matrix.mode == 'wazero' && 'true' || '' }}
+
+      - name: run tests (windows cgo)
+        run: go run ./build test
+        if: ${{ startsWith(matrix.os, 'windows-') && matrix.mode == 'cgo' }}
+        # Shell does not support conditional expressions using matrix, so for now we duplicate the steps
+        shell: "msys2 {0}"
+        env:
+          RE2_TEST_MODE: ${{ matrix.mode }}
+          # General coverage should be good enough to not need to slow down development
+          # on these slow tests.
+          RE2_TEST_EXHAUSTIVE: ${{ github.event_name != 'pull_request' && '1' || '0'}}
+          # Windows runner seems to not have enough CPU performance to keep up without a memory limit
+          GOMEMLIMIT: ${{ github.event_name != 'pull_request' && '1GiB' || '' }}
+
+  test-bsd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/setup-go@3041bf56c941b39c61721a86cd11f3bb1338122a # v5
+        with:
+          go-version-file: go.work
+          cache-dependency-path: |
+            **/go.sum
+            build/versions.go
+
+      - name: Build
+        run: go test -c .
+        env:
+          GOOS: freebsd
+
+      - name: Test
+        uses: cross-platform-actions/action@a0672d7f6de3a78e7784bbaf491c7303f68d94b3 # v0.26.0
+        with:
+          operating_system: freebsd
+          version: "14.0"
+          shell: bash
+          run: ./go-re2.test -test.v -test.short
+          sync_files: runner-to-vm
+
+  # Runs tests using wazero inside a minimal golang docker image. This makes sure the code builds
+  # even when there is no C toolchain available. It is possible for code to work fine with CGO_ENABLED=0
+  # but not build without a C toolchain available, e.g. if C source files are checked into the repo
+  # without a build tag to exclude them from pure-Go builds.
+  docker-build:
+    runs-on: ubuntu-22.04
+    container:
+      image: golang:alpine
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - run: if command -v gcc &> /dev/null; then echo "GCC found but not expected"; exit 2; fi
+
+      - run: go run ./build test
+        env:
+          TEST_NORACE: "true"

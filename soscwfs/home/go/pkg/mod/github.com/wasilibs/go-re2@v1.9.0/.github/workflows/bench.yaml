@@ -1,0 +1,34 @@
+name: Benchmark
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**/*.md"
+      - "**/*.txt"
+      - "**/*.yaml"
+  workflow_dispatch:
+
+jobs:
+  bench:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/setup-go@3041bf56c941b39c61721a86cd11f3bb1338122a # v5
+        with:
+          go-version-file: go.work
+          cache-dependency-path: |
+            **/go.sum
+            build/versions.go
+
+      - name: setup re2 for cgo
+        run: sudo apt-get update && sudo apt-get install -y libre2-dev
+
+      - run: go run ./build bench-all
+
+      - run: go run ./build wafbench-all
+
+      - uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v3
+        with:
+          name: results
+          path: build/*bench*.txt

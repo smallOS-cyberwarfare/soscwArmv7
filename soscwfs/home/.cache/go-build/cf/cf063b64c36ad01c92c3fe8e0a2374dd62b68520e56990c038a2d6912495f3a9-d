@@ -1,0 +1,7 @@
+./baseline.go
+./detect.go
+./files.go
+./git.go
+./location.go
+./reader.go
+./utils.go

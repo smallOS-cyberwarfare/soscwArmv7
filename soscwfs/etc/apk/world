@@ -12,6 +12,7 @@ git
 go
 gpg
 gpg-agent
+hydra
 jq
 libc-utils
 make
