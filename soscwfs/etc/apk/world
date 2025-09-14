@@ -17,6 +17,9 @@ john
 jq
 libc-utils
 make
+nikto
+nmap
+nmap-ncat
 nodejs
 npm
 p7zip
